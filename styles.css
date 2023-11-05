@@ -1,4 +1,7 @@
 /* Global Styles */
+html{
+    scroll-behavior: smooth;
+}
 body {
     color: #fff;
     background-color: #000;
@@ -153,7 +156,10 @@ main {
 
 }
 
-
+#giftthegalaxy-featured{
+    width: 300px;
+    height: 300px;
+}
 
 /* Footer Styles */
 footer {
@@ -179,4 +185,3 @@ footer {
 .footer-links a[href^="#"] { /* Prevent default for placeholder links */
     pointer-events: none; /* Disables clicking */
 }
-

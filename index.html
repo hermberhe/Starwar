@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,25 +10,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
+
 <body>
-  
-  
+ 
+ 
 <!-- Header -->
 <header style="background-image: url('https://wallup.net/wp-content/uploads/2015/12/277426-Star_Wars_Episode_VII_-_The_Force_Awakens-Star_Wars.jpg');">
     <div id="logo">STAR WARS</div>
     <h1>Star Wars Universe</h1>
     <nav>
         <ul>
-            <li><a href="#">News + Features</a></li>
+            <li><a href="#news-features">News + Features</a></li>
             <li><a href="#">Video</a></li>
             <li><a href="./film.html">Films</a></li>
             <li ><a href="./character.html">Characters</a></li>
         </ul>
     </nav>
-    <div id="search-and-signin">
-        <input type="text" placeholder="Search">
-        <button>Sign In</button>
-    </div>
+    
 </header>
  
 <!-- Main Content -->
@@ -43,55 +42,43 @@
     </div>
    
 
-    <div class="latest-video">
-        <div class="video-card">
-            <iframe width="100%" height="auto" src="https://secure.disney.com/embed/60800723388c8ebd6b4f2a72?domain=www.starwars.com" allowfullscreen frameborder="0"></iframe>
-            <p><a href="https://www.starwars.com/video/ahsoka-volume-2-soundtrack-has-arrived-this-week-in-star-wars-dispatch">Ahsoka Volume 2 Soundtrack Has Arrived | This Week in Star Wars Dispatch</a></p>
+
+<!-- Latest Video Section -->
+<section class="latest-video" id="latest-video-section">
+    <h2>Latest Video</h2>
+    <div class="container">
+        <!-- Container for latest videos -->
+        <div class="latest-video" id="latest-video-container">
+            <!-- Video card for Ahsoka Volume 2 Soundtrack -->
+            <div class="video-card">
+                <iframe width="100%" height="auto" src="https://secure.disney.com/embed/60800723388c8ebd6b4f2a72?domain=www.starwars.com" allowfullscreen frameborder="0"></iframe>
+                <p><a href="https://www.starwars.com/video/ahsoka-volume-2-soundtrack-has-arrived-this-week-in-star-wars-dispatch">Ahsoka Volume 2 Soundtrack Has Arrived | This Week in Star Wars Dispatch</a></p>
+            </div>
+            <!-- Video card for Inside Look at Luthen Rael | Andor -->
+            <div class="video-card">
+                <iframe width="100%" height="auto" src="https://secure.disney.com/embed/5ee26d2dc3b04ebd6b4f2a72?domain=www.starwars.com" allowfullscreen frameborder="0"></iframe>
+                <p><a href="https://www.starwars.com/video/inside-look-at-luthen-rael-andor">Inside Look at Luthen Rael | Andor</a></p>
+            </div>
+            <!-- Video card for Behind the Scenes of the Obi-Wan Kenobi Series -->
+            <div class="video-card">
+                <iframe width="100%" height="auto" src="https://secure.disney.com/embed/5e29c1ce498ebebd6b4f2a72?domain=www.starwars.com" allowfullscreen frameborder="0"></iframe>
+                <p><a href="https://www.starwars.com/video/behind-the-scenes-of-the-obi-wan-kenobi-series">Behind the Scenes of the Obi-Wan Kenobi Series!</a></p>
+            </div>
+            <!-- Add more video cards as needed -->
         </div>
-        <!-- Add more cards for other videos as needed -->
     </div>
+</section>
 
-
-    <!-- Content for the first row of the content grid -->
-    <div class="latest-video">
-        <div class="video-card">
-            <!-- Replace the src attribute with the provided TikTok video link -->
-            <iframe width="100%" height="auto" src="https://www.tiktok.com/@starwars/video/7295801528609197358?is_from_webapp=1&sender_device=pc" allowfullscreen frameborder="0"></iframe>
-            <p><a href="https://www.tiktok.com/@starwars/video/7295801528609197358?is_from_webapp=1&sender_device=pc">TikTok Video Title</a></p>
-        </div>
-    </div>
-    
-    
-
-    <div class="content-grid">
-    <!-- Row 1 -->
-    <div class="video-card">
-        <img src="https://www.starwars.com/video/ahsoka-volume-2-soundtrack-has-arrived-this-week-in-star-wars-dispatch" alt="Ahsoka">
-        <p>Ahsoka Volume 2 Soundtrack Has Arrived | This Week in Star Wars Dispatch</p>
-    </div>
-    <div class="video-card">
-        <img src="https://www.starwars.com/video/time-for-an-ahsoka-rewatch-this-week-in-star-wars-dispatch" alt="Ahsoka Rewatch">
-        <p>Time for an Ahsoka Rewatch | This Week in Star Wars Dispatch</p>
-    </div>
-    <!-- Row 2 -->
-    <div class="tiktok-card">
-        <img src="https://www.tiktok.com/@starwars/video/7290719041637944618" alt="TikTok User">
-        <p>There's hope for you yet.</p>
-    </div>
-    <div class="tiktok-card">
-        <img src="https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/84723a34407447f38f4adab97d29cc6c_1697137250~tplv-photomode-zoomcover:720:720.jpeg?x-expires=1698210000&x-signature=Ds9WoRjeLMD76n6AWBxgjbL%2FvZE%3D" alt="Anakin Skywalker">
-        <p>Welcome back, Anakin Skywalker.</p>
-    </div>
 
     <!-- Latest News + Features -->
-    <section class="news-features">
+    <section class="news-features" id="news-features">
         <h2>Latest News + Features</h2>
         <div class="card">
-            <img src="https://lumiere-a.akamaihd.net/v1/images/giftthegalaxy-featured_4ce7b5a0.jpeg?region=0,0,1280,720" alt="Gift the Galaxy">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/giftthegalaxy-featured_4ce7b5a0.jpeg?region=0,0,1280,720" alt="Gift the Galaxy" id="giftthegalaxy-featured">
             <p>"Gift the Galaxy" This Holiday Season - Updated</p>
         </div>
         <div class="card">
-            <img src="https://www.starwars.com/news/quiz-which-star-wars-character-should-you-be-for-halloween" alt="Quiz">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/quiz-which-star-wars-character-should-you-be-for-hallow_2c682b98.jpeg?region=0,0,1600,900" alt="Quiz">
             <p>Quiz: Which Star Wars Character Should You Be for Halloween?</p>
         </div>
         <div class="card">
@@ -100,24 +87,7 @@
         </div>
         <a href="#" class="view-all">VIEW ALL &gt;</a>
     </section>
-
-    <!-- Latest Video -->
-    <section class="latest-video" id="honey">
-        <h2>Latest Video</h2>
-        <div class="video-card">
-            <img src="https://www.starwars.com/video/ahsoka-volume-2-soundtrack-has-arrived-this-week-in-star-wars-dispatch" alt="Ahsoka Video">
-            <p>Ahsoka Volume 2 Soundtrack Has Arrived | This Week in Star Wars Dispatch</p>
-        </div>
-        <div class="video-card">
-            <img src="https://www.starwars.com/video/disney100-on-tiktok-this-week-in-star-wars-dispatch" alt="Darth Vader Video">
-            <p>Disney100 on TikTok | This Week In Star Wars Dispatch</p>
-        </div>
-        <div class="video-card">
-            <img src="https://www.starwars.com/video/ready-set-new-star-wars-books-this-weeks-in-star-wars-dispatch" alt="New Books Video">
-            <p>Ready, Set, New Star Wars Books! | This Week in Star Wars Dispatch</p>
-        </div>
-    </section>
-    </div>
+</div>
 
     <footer>
         <div class="social-icons">
@@ -125,6 +95,7 @@
             <a href="#"><img src="https://www.instagram.com/starwars/" alt="Instagram"></a>
             <a href="#"><img src="https://twitter.com/starwars" alt="Twitter"></a>
         </div>
+
 
         <div class="footer-links">
             <a href="#http://disneytermsofuse.com/">Terms of Use</a>

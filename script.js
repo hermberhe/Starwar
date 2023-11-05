@@ -15,6 +15,7 @@ function fetchCharacterData() {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         const characterDiv = createCharacterDiv(data.results);
         const container = document.getElementById('character-container');
         container.appendChild(characterDiv);
@@ -24,6 +25,7 @@ function fetchCharacterData() {
       });
   }
   
+  
   function createCharacterDiv(characters) {
     const characterDiv = document.createElement('div');
     characterDiv.id = 'character-data';
@@ -31,13 +33,21 @@ function fetchCharacterData() {
     characters.forEach((character) => {
       const characterElement = document.createElement('div');
       const characterName = document.createElement('h2');
+      const characterList = document.createElement('ul')
+      const characterList1 = document.createElement('li')
+      const characterList2 = document.createElement('li')
+      const characterList3 = document.createElement('li')
       characterName.textContent = character.name;
-  
-      // You can add more details by creating additional elements like this:
-      // const characterHeight = document.createElement('p');
-      // characterHeight.textContent = `Height: ${character.height}`;
-  
+      characterList1.textContent =`Height: ${character.height}`;
+      characterList2.textContent = `Hair Color: ${character.hair_color}`;
+      characterList3.textContent = `Gender: ${character.gender}`;
+      characterList.appendChild(characterList1);
+      characterList.appendChild(characterList2);
+      characterList.appendChild(characterList3);
       characterElement.appendChild(characterName);
+
+      characterElement.appendChild(characterList);
+  
       // characterElement.appendChild(characterHeight);
   
       characterDiv.appendChild(characterElement);
@@ -56,6 +66,7 @@ function fetchFilmData() {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         const filmDiv = createFilmDiv(data.results);
         const filmContainer = document.getElementById('film-container');
         filmContainer.appendChild(filmDiv);
@@ -73,12 +84,21 @@ function fetchFilmData() {
       const filmElement = document.createElement('div');
       const filmTitle = document.createElement('h2');
       filmTitle.textContent = film.title;
-      
-      // You can add more details by creating additional elements like this:
-      // const filmDirector = document.createElement('p');
-      // filmDirector.textContent = `Director: ${film.director}`;
+      const filmList = document.createElement('ul')
+      const filmList1 = document.createElement('li')
+      const filmList2 = document.createElement('li')
+      const filmList3 = document.createElement('li')
+    
+      filmList1.textContent =`Director: ${film.director}`;
+      filmList2.textContent = `Producer: ${film.producer}`;
+      filmList3.textContent = `Release Date: ${film.release_date}`;
+      filmList.appendChild(filmList1);
+      filmList.appendChild(filmList2);
+      filmList.appendChild(filmList3);
+  
       
       filmElement.appendChild(filmTitle);
+      filmElement.appendChild(filmList);
       // filmElement.appendChild(filmDirector);
   
       filmDiv.appendChild(filmElement);
@@ -87,13 +107,18 @@ function fetchFilmData() {
     return filmDiv;
   }
   
+  if (filmLink) {
+    filmLink.addEventListener('click', (event) => {
+    fetchFilmData();
+  })
+    
+  }  
+  if(characterLink){
+    characterLink.addEventListener('click', (event) => {
+      fetchCharacterData(); // Call the function when the webpage loads
+  
+    })  
 
-characterLink.addEventListener('click', (event) => {
-    fetchCharacterData(); // Call the function when the webpage loads
-  })  
-
-
-filmLink.addEventListener('click', (event) => {
-    console.log('honey says hi');
-})
+  }
+    
 })
