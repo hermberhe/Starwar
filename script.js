@@ -67,6 +67,7 @@ function fetchFilmData() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
+
         const filmDiv = createFilmDiv(data.results);
         const filmContainer = document.getElementById('film-container');
         filmContainer.appendChild(filmDiv);
@@ -109,13 +110,14 @@ function fetchFilmData() {
   
   if (filmLink) {
     filmLink.addEventListener('click', (event) => {
+
     fetchFilmData();
   })
     
   }  
   if(characterLink){
     characterLink.addEventListener('click', (event) => {
-      fetchCharacterData(); // Call the function when the webpage loads
+      fetchCharacterData(); 
   
     })  
 
